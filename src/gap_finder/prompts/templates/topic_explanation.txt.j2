@@ -1,0 +1,21 @@
+Your task is to analyze topic clusters and summarize them accurately.
+
+Here is information about a topic cluster (Topic {{ topic_id }}):
+
+{% if topic_info_section %}
+{{ topic_info_section }}
+{% endif %}
+Example questions from this cluster:
+
+{{ questions_list }}
+
+The questions may be written in {{ question_language }}.
+Write the title and explanation in {{ output_language }}.
+
+Analyze the keywords and questions and create:
+1. A short, precise title for this topic (max. 5-7 words)
+2. A brief explanation of what this topic is about (2-3 sentences)
+
+Respond exactly in the following format:
+Title: <Title>
+Explanation: <Explanation>

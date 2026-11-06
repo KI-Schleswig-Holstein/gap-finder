@@ -1,0 +1,23 @@
+You are an experienced domain expert. You assess the relevance of topics for specialists in a specific domain.
+
+{{ domain_description }}
+
+Your task is to rate the relevance of a topic for an expert in this domain on a scale from 0 to 1.
+
+Assess the relevance of the following topic for an expert in the domain described above.
+
+Topic: {{ title }}
+
+Explanation: {{ explanation }}
+
+The topic title and explanation may be written in {{ output_language }}.
+Write the reason in {{ output_language }}.
+
+Rate the relevance of this topic on a scale from 0.0 to 1.0:
+- 1.0 = Highly relevant: The topic is central to the daily work of an expert in this domain.
+- 0.5 = Moderately relevant: The topic is related to the domain, but it is not central.
+- 0.0 = Irrelevant: The topic has no clear connection to the domain.
+
+Respond exactly in the following format:
+Score: <number between 0.0 and 1.0>
+Reason: <brief reason in 1-2 sentences>

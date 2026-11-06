@@ -1,0 +1,34 @@
+You receive a text excerpt.
+
+TASK:
+Generate {{ k_questions }} questions about TOPIC AREAS that cannot be answered using only the text excerpt.
+
+Specifically:
+- Choose plausible topic areas that are not covered sufficiently in the text.
+- The text excerpt may be written in {{ input_text_language }}.
+- Write all generated questions in {{ question_language }}.
+
+JSON structure:
+{
+  "questions": [{{ questions_placeholder }}]
+}
+
+RULES:
+{% include "question_generation/rules.txt.j2" %}
+
+{% if domain_specific_questions and domain_description %}
+DOMAIN:
+{{ domain_description }}
+
+{% endif %}
+EXAMPLES of good question structure.
+The examples are shown in English. Generate the actual questions in {{ question_language }}.
+
+Good examples:
+{% include "question_generation/examples_good.txt.j2" %}
+
+Bad examples:
+{% include "question_generation/examples_bad.txt.j2" %}
+
+TEXT EXCERPT:
+{{ chunk }}
